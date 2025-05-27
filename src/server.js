@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5001
 app.use(rateLimiter)
 app.use(express.json())
 
-app.get("api/health", (req, res) => {
+app.get("/api/health", (req, res) => {
   res.status(200).json({status: "ok"})
 })
 
