@@ -42,7 +42,7 @@ export async function deleteTransaction(req, res) {
   try {
     const { id } = req.params
     if (Number.isNaN(Number(id))) {
-      res.status(400).json({ message: "Invalid transaction id" })
+      return res.status(400).json({ message: "Invalid transaction id" })
     }
 
     const result = await sql`
